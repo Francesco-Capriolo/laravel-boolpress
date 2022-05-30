@@ -6,7 +6,11 @@
             <div class="row justify-content-center">
                 <div class="col-11 col-md-9 col-lg-6">
                     <div class="card mb-3">
-                        <img src="{{asset('/storage') .'/'. $post->image_url}}" class="card-img-top" alt="Image of {{$post->title}}">
+                        @if(str_starts_with($post->image_url, 'https://') || str_starts_with($post->image_url, 'http://'))
+                            <img class="rounded w-100" src="{{ $post->image_url }}" alt="image of {{$post->title}}">
+                        @else
+                            <img class="rounded w-100" src="{{ asset('/storage') . '/' . $post->image_url }}" alt="image of {{$post->title}}">
+                        @endif
                         <div class="card-body">
                             <h5 class="card-title">{{$post->title}}</h5>
                             <p class="card-text">{{$post->author}}</p>

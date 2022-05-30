@@ -32,7 +32,7 @@ Route::middleware('auth') //£ intermediario che si assicura che il contenuto si
     Route::resource('posts','PostController');
 });
 
-
+Route::get('/contacts', 'Guest\ContactController@contact')->name('guest.contact');
 
 Route::get('/test', function () {
     return view('guest.test');
