@@ -4,6 +4,9 @@
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
+                <div class="col-9 mx-auto">
+                    <a href="{{route('admin.posts.create')}}" class="btn btn-lg btn-primary">Pubblica un nuovo post</a>
+                </div>
                 <table class="table table-dark table-hover w-75 mx-auto">
                     <thead>
                         <tr>

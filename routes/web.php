@@ -31,3 +31,9 @@ Route::middleware('auth') //£ intermediario che si assicura che il contenuto si
     Route::get('/', 'HomeController@index')->name('home');
     Route::resource('posts','PostController');
 });
+
+
+
+Route::get('/test', function () {
+    return view('guest.test');
+});

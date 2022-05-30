@@ -6,7 +6,7 @@
             <div class="row justify-content-center">
                 <div class="col-11 col-md-9 col-lg-6">
                     <div class="card mb-3">
-                        <img src="{{$post->image_url}}" class="card-img-top" alt="Image of {{$post->title}}">
+                        <img src="{{asset('/storage') .'/'. $post->image_url}}" class="card-img-top" alt="Image of {{$post->title}}">
                         <div class="card-body">
                             <h5 class="card-title">{{$post->title}}</h5>
                             <p class="card-text">{{$post->author}}</p>

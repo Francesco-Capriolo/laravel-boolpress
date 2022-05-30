@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -29,7 +31,9 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        $posts= Post::all();
+
+        return view('admin.posts.create', compact('posts'));
     }
 
     /**
@@ -40,7 +44,18 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $data = $request->all();
+
+        $data['author'] = Auth::user()->name;
+        $data['slug'] = Str::slug($data['title'],'-');
+        $newPost = new Post();
+        $newPost->fill($data);
+        $newPost->image_url = Storage::put('uploads', $data['image']);
+        $newPost->save();
+
+        return redirect()->route('admin.posts.index')->with('message', 'il post è stato pubblicato');
+
     }
 
     /**
