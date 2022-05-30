@@ -7,8 +7,11 @@
     <title>Mail</title>
 </head>
 <body>
-    <h1>
-        Grazie per averci scritto
-    </h1>
+    {{-- @dump($author, $authorEmail, $message) --}}
+    <h1>L'utente {{ $author }} ti ha contattato </h1>
+    <h3>La sua email : {{ $authorEmail }} </h3>
+    <p>
+        Questo è il contenuto del messaggio: {{ $guestMessage }}
+    </p>
 </body>
 </html>

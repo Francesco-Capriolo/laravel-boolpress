@@ -2244,6 +2244,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Header.vue */ "./resources/js/components/Header.vue");
 /* harmony import */ var _components_Main_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Main.vue */ "./resources/js/components/Main.vue");
+/* harmony import */ var _pages_Posts_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pages/Posts.vue */ "./resources/js/pages/Posts.vue");
 //
 //
 //
@@ -2251,6 +2252,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2262,7 +2264,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   components: {
     Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Main: _components_Main_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    Main: _components_Main_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Posts: _pages_Posts_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }
 });
 
@@ -3677,7 +3680,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-12 col-md-6 col-lg-4" }, [
+  return _c("div", { staticClass: "col-12 col-md-6 col-lg-3" }, [
     _c("div", { staticClass: "card m-2 p-2" }, [
       _c("img", {
         staticClass: "card-img-top",

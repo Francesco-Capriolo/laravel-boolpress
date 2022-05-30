@@ -33,6 +33,7 @@ Route::middleware('auth') //£ intermediario che si assicura che il contenuto si
 });
 
 Route::get('/contacts', 'Guest\ContactController@contact')->name('guest.contact');
+Route::post('/test', 'Guest\ContactController@contactSend')->name('guest.storeContact');
 
 Route::get('/test', function () {
     return view('guest.test');

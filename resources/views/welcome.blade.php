@@ -26,6 +26,7 @@
                     <div class="top-right links">
                         @auth
                             <a href="{{ route('home') }}">Home</a>
+                            <a href="{{route('guest.contact')}}">Contattaci</a>
                             {{-- <a href="{{ route('admin.posts.index') }}">Posts</a>
                             <a href="{{ url('/home') }}">Category</a> --}}
                         @else

@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 col-md-6 col-lg-4">
+  <div class="col-12 col-md-6 col-lg-3">
     <div class="card m-2 p-2">
       <img
         :src="post.image_url"

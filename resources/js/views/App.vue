@@ -8,6 +8,7 @@
 <script>
 import Header from "../components/Header.vue";
 import Main from "../components/Main.vue";
+import Posts from "../pages/Posts.vue";
 
 export default {
   name: "App",
@@ -19,6 +20,7 @@ export default {
   components: {
     Header,
     Main,
+    Posts,
   },
 };
 </script>
