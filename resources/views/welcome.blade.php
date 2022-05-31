@@ -30,6 +30,7 @@
                             {{-- <a href="{{ route('admin.posts.index') }}">Posts</a>
                             <a href="{{ url('/home') }}">Category</a> --}}
                         @else
+                            <a href="{{route('guest.contact')}}">Contattaci</a>
                             <a href="{{ route('login') }}">Login</a>
 
                             @if (Route::has('register'))
